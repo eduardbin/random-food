@@ -1,15 +1,55 @@
-.ba-main-menu{
-    a{
-        color: $black;
-        &:hover{
-            color: lighten($primary-color, 20%);
-        }
-    }
+.ba-header {
+  position: absolute;
+  top: 8px;
+  width: 100%;
+
+  @include breakpoint(medium) {
+    padding: 5px;
+    width: 100%;
+    top: 16px;
+  }
+
+  a {
+    color: #fff;
+  }
 }
-.off-canvas{
-    .menu{
-        a{
-            padding: 10px;
-        }
+
+.ba-btn-grow {
+  flex-grow: 1;
+  padding: 0 15px;
+}
+.ba-header-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.ba-flex {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  a + a {
+    margin-left: 28px;
+  }
+}
+.ba-main-menu {
+  //   a {
+  //     color: $black;
+  //     &:hover {
+  //       color: lighten($primary-color, 20%);
+  //     }
+  //   }
+}
+.off-canvas {
+  .menu {
+    a {
+      padding: 10px;
     }
+  }
+}
+.ba-header-wrap {
+  background-color: $primary-color;
+}
+
+.ba-c-name {
+  vertical-align: middle;
+  font-size: 15px;
 }

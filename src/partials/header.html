@@ -1,19 +1,51 @@
-<header class="ba-header-wrap">    
+<header class="ba-header-wrap ba-header">    
     <div class="ba-header-header">
-        <div class="row align-middle ">
-            <div class="column">
-                <a href="/">
-                    <img src="{{root}}assets/img/logo.png" alt="Logo">
+        <div class="row  ba-header-flex align-center-middle">
+           
+                <a href="/" class="show-for-medium">
+                    <img src="{{root}}assets/img/group.png" alt="Logo">
                 </a>
+<div class="ba-btn-grow">
+                <button class="menu-icon dark " type="button" data-open="offCanvas" aria-label="Show menu">
+                        </button>
+                
             </div>
             <!-- /.column -->
-            <div class="column shrink">
+
+<div class="row ba-flex">
+  <a class=" row align-center-middle" href="">
+      <span class="ba-c-name">Poltava</span>
+  </a>
+              <a>
+                  
+                    <svg width="16" height="23">
+
+    <use xlink:href="#location-icon">
+    </svg>
+
+</a>
+
+                <a>
+                    <svg width="24" height="24">
+
+    <use xlink:href="#bin-icon">
+    </svg></a>
+
+                <a><svg width="21" height="31">
+
+    <use xlink:href="#human-icon">
+    </svg></a>
+</div>
+  
+           
+            <!-- <div class="column shrink">
                 <button class="menu-icon dark hide-for-medium" type="button" data-open="offCanvas" aria-label="Show menu">
                         </button>
                 <ul class="menu ba-main-menu show-for-medium">
                     <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">Home</a></li>
+
                 </ul>
-            </div>
+            </div> -->
             <!-- /.column -->
         </div>
         <!-- /.row -->
