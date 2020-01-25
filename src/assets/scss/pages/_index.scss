@@ -1,0 +1,56 @@
+.ba-section-intro {
+  padding-top: 45px;
+
+  @include breakpoint(medium) {
+    padding-top: 222px;
+  }
+
+  .ba-button {
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 34px;
+    color: #fff;
+    @include breakpoint(medium) {
+      font-size: 60px;
+      color: currentColor;
+      margin-bottom: 1px;
+    }
+  }
+  .ba-subtitle {
+    font-size: 14px;
+    padding: 0 39px;
+    @include breakpoint(medium) {
+      font-size: 16px;
+    }
+  }
+
+  .ba-big-logo {
+    margin-bottom: 7px;
+  }
+  .ba-heady {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 15px;
+  }
+  .ba-form {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    .ba-inp {
+      margin-bottom: 0;
+    }
+  }
+  .ba-intro-logo-heady {
+    margin-right: 15px;
+  }
+  .ba-btn-main {
+    position: relative;
+    right: 20px;
+  }
+  background-color: #747474;
+  @include breakpoint(medium) {
+    background-image: url(assets/img/intro_bg.jpg);
+  }
+}
