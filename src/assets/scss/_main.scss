@@ -36,3 +36,11 @@ button,
     background-color: transparent;
   }
 }
+
+body {
+  @include breakpoint(small only) {
+    background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
+
+    scroll-behavior: smooth;
+  }
+}
