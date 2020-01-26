@@ -16,3 +16,16 @@ import './lib/foundation-explicit-pieces';
 import './lib/slick.min.js';
 
 $(document).foundation();
+
+
+// 'use strict';
+
+// let deliveryMap;
+
+// document.addEventListener('load', initDeliveryMap);
+// function initDeliveryMap() {
+// 	deliveryMap = new google.maps.Map(document.querySelector('.ed-delivery__map'), {
+// 		center: { lat: -34.397, lng: 150.644 },
+// 		zoom: 8
+// 	});
+// };
