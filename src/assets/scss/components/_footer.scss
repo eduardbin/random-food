@@ -19,12 +19,12 @@
   }
   .ba-svg-group-f {
     a + a {
-      margin-left: 28px;
+      margin-left: 15px;
     }
   }
 }
 .ba-content-f {
-  padding: 0 20px;
+  padding: 0 30px;
 }
 .ba-logo-f {
   @include breakpoint(small only) {
