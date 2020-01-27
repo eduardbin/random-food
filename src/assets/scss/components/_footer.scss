@@ -1,6 +1,33 @@
-.ba-footer{
-    
+.ba-footer {
+  background-color: $primary-color;
+  padding: 10px 0;
+  a {
+    color: #ffffff;
+  }
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+
+  @include breakpoint(medium) {
+    padding: 5px 10px;
+    width: 100%;
+    bottom: 16px;
+  }
+  .ba-tel-f {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  .ba-svg-group-f {
+    a + a {
+      margin-left: 15px;
+    }
+  }
 }
-.ba-copyright{
-    
+.ba-content-f {
+  padding: 0 30px;
+}
+.ba-logo-f {
+  @include breakpoint(small only) {
+    display: none;
+  }
 }

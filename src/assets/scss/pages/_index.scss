@@ -1,12 +1,18 @@
 .ba-section-intro {
-  padding-top: 45px;
+  padding-top: 60px;
+  background-image: url(assets/img/intro_bg.jpg);
 
   @include breakpoint(medium) {
     padding-top: 222px;
+    padding-bottom: 27px;
+    background: url(../img/intro_bg.jpg) 50%;
+    background-size: cover;
+  }
+}
   }
 
   .ba-button {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   h1 {
     font-size: 34px;
@@ -22,10 +28,13 @@
     padding: 0 39px;
     @include breakpoint(medium) {
       font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 21px;
     }
   }
 
   .ba-big-logo {
+  
     margin-bottom: 7px;
   }
   .ba-heady {
@@ -49,10 +58,79 @@
     position: relative;
     right: 20px;
   }
-  background-color: #747474;
+  .ba-btn-margin {
+    margin-bottom: 55px;
+  }
+  @include breakpoint(small only) {
+    color: #fff;
+  }
+}
+//sell section
+.ba-section-sell {
+  padding-top: 25px;
+  padding-bottom: 80px;
+  color: #fff;
+
   @include breakpoint(medium) {
-    background: url(../img/intro_bg.jpg) 50%;
-    background-size: cover;
+     background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
+    padding-top: 75px;
+  }
+  h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    @include breakpoint(small only) {
+      font-size: 20px;
+    }
+  }
+}
+h4 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.ba-card {
+  max-width: 382px;
+  img {
+    width: 382px;
+    flex-grow: 1;
+  }
+  .ba-restoraunt-info {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .ba-product {
+    margin-bottom: 21px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    mix-blend-mode: normal;
+  }
+  .ba-intro-bin {
+    letter-spacing: 1px;
+    margin-left: 8px;
+    color: $primary-color;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &__desc {
+    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+    display: block;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    @include breakpoint(medium-down) {
+    }
+  }
+}
+.ba-scroll {
+  margin-top: 27px;
+}
+
+.ba-cards {
+  .ba-card {
+    margin-bottom: 25px;
   }
 }
 
@@ -143,3 +221,6 @@
     margin: 0;
   }
 }
+
+
+
