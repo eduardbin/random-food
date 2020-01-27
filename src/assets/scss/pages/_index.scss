@@ -8,8 +8,6 @@
     background: url(../img/intro_bg.jpg) 50%;
     background-size: cover;
   }
-}
-  }
 
   .ba-button {
     margin-bottom: 8px;
@@ -34,7 +32,6 @@
   }
 
   .ba-big-logo {
-  
     margin-bottom: 7px;
   }
   .ba-heady {
@@ -72,7 +69,7 @@
   color: #fff;
 
   @include breakpoint(medium) {
-     background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
+    background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
     padding-top: 75px;
   }
   h2 {
@@ -221,6 +218,3 @@ h4 {
     margin: 0;
   }
 }
-
-
-
