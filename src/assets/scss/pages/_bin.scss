@@ -1,0 +1,73 @@
+.ba-section-bin{
+    padding: 98px  0;
+    background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
+}
+.ba-bin-sec{
+    background: #fff;
+    padding: 22px;
+    h5{
+        font-size: 24px;
+        margin-bottom: 7px;
+    }
+
+.ba-bin-rest{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 1px;
+}
+}
+
+.ba-bin-sum{
+    font-size: 18px;
+}
+.ba-bin-cards{
+   
+
+}
+
+.ba-bin-card{
+  
+    // width: 344px;
+margin-top: 9px;
+    display: flex;
+    flex-direction: row;
+      background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+  img{
+display: block;
+object-fit: cover;
+
+  }
+.ba-dish-title{
+font-size: 24px;
+font-weight: normal;
+
+}
+}
+.ba-bottom-info{
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+.ba-dish-info{
+   
+
+}
+.ba-bin-title{
+    margin-top: 48px;
+    margin-bottom: 31px;
+    color: #fff;
+    font-size: 24px;
+}
+.ba-dish-info-area{
+padding: 17px;
+padding-bottom: 8px;
+ display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+.ba-dish-price{
+    margin-bottom: 0;
+}

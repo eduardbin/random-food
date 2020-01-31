@@ -2,6 +2,11 @@
   padding-top: 60px;
   background-image: url(assets/img/intro_bg.jpg);
 
+   .ba-once{
+    margin-bottom: 20px;
+    
+  }
+
   @include breakpoint(medium) {
     padding-top: 222px;
     padding-bottom: 27px;
@@ -224,9 +229,17 @@ h4 {
 
 
 ///ba-card-section
+.ba-once-card{
+ margin-top: 35px;
+margin-bottom: 38px;
+
+  
+}
 .ba-card-section{
   padding: 100px 50px;
-  background-color: grey;
+  background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
+
+
 
   .ba-info-slick{
     color: #fff;
@@ -321,11 +334,12 @@ align-items: center;
   font-size: 12px;
 }
 
-.ba-save-lenght{
+.ba-save-length{
+
+ 
+}
+.ba-btn-wrap{
   display: flex;
   flex-direction: column;
   align-items: center;
-  .ba-button{
-    margin-bottom: 10px;
-  }
 }
