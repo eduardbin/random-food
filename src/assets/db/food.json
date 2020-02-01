@@ -62,15 +62,15 @@
       },
 
       {
-        "panorama": {
+        "atmosphere": {
           "restaurantLogo": "assets/img/restaurant-logos/atmosphere.jpg",
 
           "main": [
             {
-              "foodName": "Французский суп из лука",
-              "foodPrice": "109грн",
-              "foodMass": "300г",
-              "foodIngredients": "French onion soup",
+              "foodName": "Томато-Капрезе",
+              "foodPrice": "115грн",
+              "foodMass": "180г",
+              "foodIngredients": "микс салату, соус песто, сырный крем, кедровий орех",
               "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/493/6464667685a269fcaf0a07.jpg"
             },
 

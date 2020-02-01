@@ -14,6 +14,13 @@ window.jQuery = $;
 import './lib/foundation-explicit-pieces';
 
 import './lib/slick.min.js';
+import './App.vue';
+
+new Vue({
+	el: '#catalog',
+	template: '<App/>',
+	components: { App },
+});
 
 $(document).foundation();
 
