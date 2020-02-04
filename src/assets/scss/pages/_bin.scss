@@ -5,6 +5,7 @@
 .ba-bin-sec{
     background: #fff;
     padding: 22px;
+    margin-bottom: 40px;
     h5{
         font-size: 24px;
         margin-bottom: 7px;
@@ -70,4 +71,125 @@ justify-content: space-between;
 }
 .ba-dish-price{
     margin-bottom: 0;
+}
+
+.ba-inp{
+    margin-bottom: 70px;
+    display: block;
+
+    .ba-inp-height{
+max-width: 328px;
+height: 48px;
+color: rgba(80, 80, 80, 0.6);
+font-size: 14px;
+    }
+
+
+}
+
+.ba-inp-name{
+
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.ba-pay-span{
+    color: #fff;
+    margin: 15px 0;
+}
+
+.ba-payment-method{
+display: flex;
+margin-bottom: 20px;
+}
+
+.ba-inpt{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+align-items: center;
+margin-bottom: 10px;
+
+
+}
+.ba-inp-wrap{
+    display: flex;
+//     input{
+//           width: 20px;
+//   height: 20px;
+//   background-color: transparent;
+// border: 1px solid #fff;
+//   transition: 0.2s all linear;
+//   outline: none;
+//     user-select: none;
+
+//     }
+//   input:checked {
+//   border: 6px solid black;
+//    background-color: #2196F3
+  
+// }
+
+
+
+input[type="radio"] {
+    background-color: transparent;
+   border: 2px solid #fff;
+    border-radius: 50%;
+   
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    height: 22px;
+    margin-right: 15px;
+    position: relative;
+    width: 22px;
+    -webkit-appearance: none;
+}
+input[type="radio"]:after {
+    background-color: transparent;
+    border-radius: 50%;
+   
+    content: '';
+    display: block;
+    height: 10px;
+    left: 4px;
+    position: relative;
+    top: 4px;
+    width: 10px;
+}
+input[type="radio"]:checked:after {
+    background-color: $primary-color;
+  
+}
+}
+
+.ba-total-summ{
+
+   &__sum{
+       color: #fff;
+   } 
+   &__text{
+
+
+
+       color: getcolor(primary) ;
+   }
+}
+
+.contactChoice1{
+    input{
+    margin-bottom: 0 ;
+
+    }
+}
+
+.nnn{
+    margin-bottom: 0;
+}
+
+.ba-btn-text{
+
 }
