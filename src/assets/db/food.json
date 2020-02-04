@@ -1,0 +1,125 @@
+[
+  {
+    "european": [
+      {
+        "palazzo": {
+          "restaurantLogo": "assets/img/restaurant-logos/palazzo.jpg",
+
+          "main": [
+            {
+              "foodName": "Французский суп из лука",
+              "foodPrice": "109грн",
+              "foodMass": "300г",
+              "foodIngredients": "French onion soup",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/493/6464667685a269fcaf0a07.jpg"
+            },
+
+            {
+              "foodName": "Филе дорадо с овощами",
+              "foodPrice": "335грн",
+              "foodMass": "300г",
+              "foodIngredients": "Dorado fillet with vegetables",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/494/21383138015a269fef88721.jpg"
+            }
+          ],
+
+          "drink": [
+            {
+              "foodName": "Апероль Спритц",
+              "foodPrice": "175грн",
+              "foodMass": "200г",
+              "foodIngredients": "ликер Aperol, игристое вино Marques de Terrabona Cava Brut, фрэш апельсина, газированная вода",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/490/5169432015a269f3c3ff79.jpg"
+            },
+
+            {
+              "foodName": "Космо Тини",
+              "foodPrice": "95грн",
+              "foodMass": "150г",
+              "foodIngredients": "водка, ликер Cointreau, фрэш лимона, смородина, сироп маракуйя",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/48/486/11351811555a269e48e8a2a.JPG"
+            }
+          ],
+
+          "dessert": [
+            {
+              "foodName": "Привет из Киева",
+              "foodPrice": "125грн",
+              "foodMass": "160г",
+              "foodIngredients": "торт с волосским орехом",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/12/1200/13914472435cfa179e1d9a4.jpg"
+            },
+
+            {
+              "foodName": "Любимый",
+              "foodPrice": "125грн",
+              "foodMass": "200г",
+              "foodIngredients": "черничный торт",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/12/1202/19157717895cfa17dc8740e.jpg"
+            }
+          ]
+        }
+      },
+
+      {
+        "atmosphere": {
+          "restaurantLogo": "assets/img/restaurant-logos/atmosphere.jpg",
+
+          "main": [
+            {
+              "foodName": "Томато-Капрезе",
+              "foodPrice": "115грн",
+              "foodMass": "180г",
+              "foodIngredients": "микс салату, соус песто, сырный крем, кедровий орех",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/493/6464667685a269fcaf0a07.jpg"
+            },
+
+            {
+              "foodName": "Филе дорадо с овощами",
+              "foodPrice": "335грн",
+              "foodMass": "300г",
+              "foodIngredients": "Dorado fillet with vegetables",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/494/21383138015a269fef88721.jpg"
+            }
+          ],
+
+          "drink": [
+            {
+              "foodName": "Апероль Спритц",
+              "foodPrice": "175грн",
+              "foodMass": "200г",
+              "foodIngredients": "ликер Aperol, игристое вино Marques de Terrabona Cava Brut, фрэш апельсина, газированная вода",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/490/5169432015a269f3c3ff79.jpg"
+            },
+
+            {
+              "foodName": "Космо Тини",
+              "foodPrice": "95грн",
+              "foodMass": "150г",
+              "foodIngredients": "водка, ликер Cointreau, фрэш лимона, смородина, сироп маракуйя",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/48/486/11351811555a269e48e8a2a.JPG"
+            }
+          ],
+
+          "dessert": [
+            {
+              "foodName": "Привет из Киева",
+              "foodPrice": "125грн",
+              "foodMass": "160г",
+              "foodIngredients": "торт с волосским орехом",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/12/1200/13914472435cfa179e1d9a4.jpg"
+            },
+
+            {
+              "foodName": "Любимый",
+              "foodPrice": "125грн",
+              "foodMass": "200г",
+              "foodIngredients": "черничный торт",
+              "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/12/1202/19157717895cfa17dc8740e.jpg"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -68,14 +68,19 @@
   }
 }
 //sell section
+.ed-section-bg-gradient {
+  @include breakpoint(medium) {
+    background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
+  }
+}
 .ba-section-sell {
   padding-top: 25px;
-  padding-bottom: 80px;
+  padding-bottom: 10px;
   color: #fff;
 
   @include breakpoint(medium) {
-    background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
     padding-top: 75px;
+    padding-bottom: 50px;
   }
   h2 {
     font-size: 34px;
@@ -137,11 +142,10 @@ h4 {
 }
 
 .ed-section--delivery {
-  background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
-  padding: 36px 0 133px;
+  padding: 0 0 66px;
 
   @include breakpoint(medium) {
-    padding: 75px 0 124px;
+    padding: 0 0 72px;
   }
 
   .ed-text-color--white {
@@ -152,38 +156,43 @@ h4 {
     font-weight: 500;
     line-height: 23px;
     letter-spacing: 0.15px;
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 
     @include breakpoint(medium) {
       font-size: 34px;
       font-weight: 400;
       line-height: 40px;
       letter-spacing: 0.25px;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
     }
   }
 }
 
 .ed-delivery__subscribe {
   line-height: 28px;
-  margin-bottom: 20px;
+  max-width: 244px;
+  margin: 0 auto 18px;
+
+  @include breakpoint(medium) {
+    max-width: none;
+    margin: 0 auto 43px;
+  }
 }
 
 .ed-delivery__map {
   height: 410px;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 
   @include breakpoint(medium) {
     height: 373px;
-    margin-bottom: 59px;
+    margin-bottom: 60px;
   }
 }
 
 .ed-delivery__content-bar {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 23px;
+  margin-bottom: 54px;
 }
 
 .ed-delivery__logo-bar {
@@ -217,16 +226,17 @@ h4 {
 .ed-delivery__content {
   display: inline-block;
   font-size: 16px;
-  width: 288px;
+  max-width: 266px;
+
+  @include breakpoint(medium) {
+    max-width: 279px;
+  }
 
   p {
+    text-align: left;
     margin: 0;
   }
 }
-
-
-
-
 
 ///ba-card-section
 .ba-once-card{
