@@ -31,8 +31,9 @@ title: СЕРВИС ПОДБОРА ЕДЫ
 	</p>
 	<div class="ba-btn-col row  text-center flex-dir-column">
 		<div class="ba-save-length ba-once">
-			<a class="ba-button  ba-button__primary show-for-medium" onclick="show_popup()">Выберите мне еду
-			</a>
+			<button type="button" class="ba-button  ba-button__primary show-for-medium" onclick="show_popup()">Выберите мне
+				еду
+			</button>
 		</div>
 
 		<div class="ba-save-length">
@@ -261,12 +262,12 @@ title: СЕРВИС ПОДБОРА ЕДЫ
 
 		<h5>Еще всего один шаг до меню мечты!</h5>
 		<p class="titles">Что нужно?</p>
-		<form action="" method="post">
+		<form action="cards.html" method="GET">
 			<div class="popup-menu__row">
 				<div class="popup-menu__block">
 					<label class="check option">
 						<div class="checkbox_style">
-							<input class="check__input" type="checkbox">
+							<input class="check__input" type="checkbox" name="main" checked>
 							<span class="check__box">
 								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img"
 									xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -283,7 +284,7 @@ title: СЕРВИС ПОДБОРА ЕДЫ
 				<div class="popup-menu__block">
 					<label class="check option">
 						<div class="checkbox_style">
-							<input class="check__input" type="checkbox">
+							<input class="check__input" type="checkbox" name="dessert" checked>
 							<span class="check__box">
 								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img"
 									xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -300,7 +301,7 @@ title: СЕРВИС ПОДБОРА ЕДЫ
 				<div class="popup-menu__block">
 					<label class="check option">
 						<div class="checkbox_style">
-							<input class="check__input" type="checkbox">
+							<input class="check__input" type="checkbox" name="drink" checked>
 							<span class="check__box">
 								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img"
 									xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -318,19 +319,19 @@ title: СЕРВИС ПОДБОРА ЕДЫ
 			<p class="titles">Какую кухню выберешь?</p>
 			<div class="row_radio">
 				<div class="suka">
-					<input type="radio" id="radio" name="radio" />
+					<input type="radio" id="radio" name="kitchen" value="all" checked />
 					<label for="radio">Любая</label>
 				</div>
 				<div class="suka">
-					<input type="radio" id="radio1" name="radio" />
+					<input type="radio" id="radio1" name="kitchen" value="european" />
 					<label for="radio1">Европа</label>
 				</div>
 				<div class="suka">
-					<input type="radio" id="radio2" name="radio" />
+					<input type="radio" id="radio2" name="kitchen" value="asian" />
 					<label for="radio2">Азия</label>
 				</div>
 				<div class="suka">
-					<input type="radio" id="radio3" name="radio" />
+					<input type="radio" id="radio3" name="kitchen" value="ukrainian" />
 					<label for="radio3">Украинская</label>
 				</div>
 			</div>
