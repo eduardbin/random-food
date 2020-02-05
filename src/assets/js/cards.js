@@ -2,6 +2,8 @@ const url = window.location.pathname;
 
 window.addEventListener('load', () => {
 	if (url == '/cards.html') {
+
+
 		$(document).ready(function () {
 			$(".ba-food_slider").slick({
 				centerMode: true,
@@ -9,5 +11,7 @@ window.addEventListener('load', () => {
 				centerPadding: '23%',
 			});
 		});
+
+
 	} else return;
 });
