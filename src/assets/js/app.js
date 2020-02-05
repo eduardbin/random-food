@@ -21,6 +21,13 @@ import './lib/slick.min.js';
 // 	template: '<App/>',
 // 	components: { App },
 // });
+$(document).ready(function(){
+	$(".ba-food_slider").slick({
+		centerMode: true,
+		slidesToShow: 1,
+		centerPadding: '23%',
+	});
+});
 
 $(document).foundation();
 
