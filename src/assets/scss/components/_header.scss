@@ -46,3 +46,12 @@
   vertical-align: middle;
   font-size: 15px;
 }
+
+.ba-svg-head{
+  transition: 0.3s;
+  &:hover{
+   filter: drop-shadow(0 0 10px #fff);
+
+  }
+  
+}
