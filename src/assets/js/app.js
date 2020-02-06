@@ -25,6 +25,8 @@ import './lib/slick.min.js';
 $(document).foundation();
 
 //cards.html
+
+//slider
 $(document).ready(function () {
 	$(".ba-food_slider").slick({
 		centerMode: true,
@@ -35,8 +37,8 @@ $(document).ready(function () {
 
 $(document).foundation();
 
-
 //index.html
+
 'use strict';
 //Create and functional map in index-page
 let deliveryMap;
@@ -77,4 +79,33 @@ function initDeliveryMap() {
 
 		deliveryMap.setCenter(pos);
 	});
+};
+
+//getting user-parameters
+let confirm = document.querySelector('[data-get-data]');
+let userForm = document.querySelector('[data-user-form]');
+let data = {
+	main: 0,
+	dessert: 0,
+	drink: 0,
+	kitchen: 0,
+};
+
+if (confirm != null) {
+	confirm.addEventListener('click', saveUserParams);
+
+	function saveUserParams(event) {
+		event.preventDefault();
+
+		data.main = userForm.elements.main.value;
+		data.dessert = userForm.elements.dessert.value;
+		data.drink = userForm.elements.drink.value;
+		data.kitchen = userForm.elements.kitchen.value;
+
+		for (let elem in data) {
+			localStorage.setItem(`${elem}`, `${data[elem]}`);
+		};
+
+		window.location.assign('./cards.html');
+	};
 };

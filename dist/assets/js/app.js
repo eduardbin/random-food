@@ -12436,6 +12436,7 @@ window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; // require('found
 // });
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); //cards.html
+//slider
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".ba-food_slider").slick({
@@ -12482,6 +12483,37 @@ function initDeliveryMap() {
     };
     deliveryMap.setCenter(pos);
   });
+}
+
+; //getting user-parameters
+
+var confirm = document.querySelector('[data-get-data]');
+var userForm = document.querySelector('[data-user-form]');
+var data = {
+  main: 0,
+  dessert: 0,
+  drink: 0,
+  kitchen: 0
+};
+
+if (confirm != null) {
+  var saveUserParams = function saveUserParams(event) {
+    event.preventDefault();
+    data.main = userForm.elements.main.value;
+    data.dessert = userForm.elements.dessert.value;
+    data.drink = userForm.elements.drink.value;
+    data.kitchen = userForm.elements.kitchen.value;
+
+    for (var elem in data) {
+      localStorage.setItem("".concat(elem), "".concat(data[elem]));
+    }
+
+    ;
+    window.location.assign('./cards.html');
+  };
+
+  confirm.addEventListener('click', saveUserParams);
+  ;
 }
 
 ;
