@@ -12451,57 +12451,60 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); //index.ht
 
 
 var deliveryMap;
-window.addEventListener('load', initDeliveryMap);
 
-function initDeliveryMap() {
-  // The location of mapCenter
-  var cities = {
-    poltava: {
-      lat: 49.592232,
-      lng: 34.545601
-    }
-  };
-  var mapCenter = cities.poltava; //map-options
-
-  deliveryMap = new google.maps.Map(document.querySelector('.ed-delivery__map'), {
-    center: mapCenter,
-    zoom: 12,
-    disableDefaultUI: true
-  }); //move mapCenter on select change
-  // let citySelect = document.querySelector('*input-select-data-atribute*');
-  // citySelect.addEventListener('change', () => {
-  // 	let city = citySelect.value;
-  // 	let newCoords = cities[city];
-  // 	deliveryMap.setCenter(newCoords);
-  // });
-  //try map with geolocation while we dont use city-list in header or
-
-  navigator.geolocation.getCurrentPosition(function (position) {
-    var pos = {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude
+if (document.querySelector('.ed-delivery__map') != null) {
+  var initDeliveryMap = function initDeliveryMap() {
+    // The location of mapCenter
+    var cities = {
+      poltava: {
+        lat: 49.592232,
+        lng: 34.545601
+      }
     };
-    deliveryMap.setCenter(pos);
-  });
+    var mapCenter = cities.poltava; //map-options
+
+    deliveryMap = new google.maps.Map(document.querySelector('.ed-delivery__map'), {
+      center: mapCenter,
+      zoom: 12,
+      disableDefaultUI: true
+    }); //move mapCenter on select change
+    // let citySelect = document.querySelector('*input-select-data-atribute*');
+    // citySelect.addEventListener('change', () => {
+    // 	let city = citySelect.value;
+    // 	let newCoords = cities[city];
+    // 	deliveryMap.setCenter(newCoords);
+    // });
+    //try map with geolocation while we dont use city-list in header or
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      deliveryMap.setCenter(pos);
+    });
+  };
+
+  window.addEventListener('load', initDeliveryMap);
+  ;
 }
 
 ; //getting user-parameters
 
-var confirm = document.querySelector('[data-get-data]');
 var userForm = document.querySelector('[data-user-form]');
 var data = {
-  main: 0,
-  dessert: 0,
-  drink: 0,
-  kitchen: 0
+  main: null,
+  dessert: null,
+  drink: null,
+  kitchen: null
 };
 
-if (confirm != null) {
+if (userForm != null) {
   var saveUserParams = function saveUserParams(event) {
     event.preventDefault();
-    data.main = userForm.elements.main.value;
-    data.dessert = userForm.elements.dessert.value;
-    data.drink = userForm.elements.drink.value;
+    data.main = userForm.elements.main.checked;
+    data.dessert = userForm.elements.dessert.checked;
+    data.drink = userForm.elements.drink.checked;
     data.kitchen = userForm.elements.kitchen.value;
 
     for (var elem in data) {
@@ -12512,7 +12515,7 @@ if (confirm != null) {
     window.location.assign('./cards.html');
   };
 
-  confirm.addEventListener('click', saveUserParams);
+  userForm.addEventListener('submit', saveUserParams);
   ;
 }
 
