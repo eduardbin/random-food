@@ -12436,6 +12436,7 @@ window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; // require('found
 // });
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); //cards.html
+//slider
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".ba-food_slider").slick({
