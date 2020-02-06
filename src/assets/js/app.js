@@ -111,3 +111,32 @@ if (userForm != null) {
 		window.location.assign('./cards.html');
 	};
 };
+
+//randomizer
+let anotherMenuButton = document.querySelector('[data-get-new-menu]');
+let fetchUrl = "assets/db/food.json";
+let foodData;
+
+if (anotherMenuButton != null) {
+	anotherMenuButton.addEventListener('click', getNewMenu);
+};
+
+function getNewMenu() {
+	foodData = getJSON();
+
+	if (localStorage.kitchen == 'all') {
+		foodData = [...foodData.european, ...foodData.asian, ...foodData.ukrainian];
+	} else {
+		foodData = [...foodData[localStorage.kitchen]];
+	};
+
+
+	console.log(foodData);
+};
+
+function getJSON() {
+	fetch(fetchUrl)
+		.then(response => response.json())
+		.then(response => foodData = response);
+	return foodData;
+};

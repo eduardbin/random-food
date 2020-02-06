@@ -12416,6 +12416,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_foundation_explicit_pieces__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/foundation-explicit-pieces */ "./src/assets/js/lib/foundation-explicit-pieces.js");
 /* harmony import */ var _lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/slick.min.js */ "./src/assets/js/lib/slick.min.js");
 /* harmony import */ var _lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 
  // Foundation JS relies on a global varaible. In ES6, all imports are hoisted
 // to the top of the file so if we used`import` to import Foundation,
@@ -12517,6 +12525,42 @@ if (userForm != null) {
 
   userForm.addEventListener('submit', saveUserParams);
   ;
+}
+
+; //randomizer
+
+var anotherMenuButton = document.querySelector('[data-get-new-menu]');
+var fetchUrl = "assets/db/food.json";
+var foodData;
+
+if (anotherMenuButton != null) {
+  anotherMenuButton.addEventListener('click', getNewMenu);
+}
+
+;
+
+function getNewMenu() {
+  foodData = getJSON();
+
+  if (localStorage.kitchen == 'all') {
+    foodData = [].concat(_toConsumableArray(foodData.european), _toConsumableArray(foodData.asian), _toConsumableArray(foodData.ukrainian));
+  } else {
+    foodData = _toConsumableArray(foodData[localStorage.kitchen]);
+  }
+
+  ;
+  console.log(foodData);
+}
+
+;
+
+function getJSON() {
+  fetch(fetchUrl).then(function (response) {
+    return response.json();
+  }).then(function (response) {
+    return foodData = response;
+  });
+  return foodData;
 }
 
 ;
