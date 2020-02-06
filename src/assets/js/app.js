@@ -91,19 +91,21 @@ let data = {
 	kitchen: 0,
 };
 
-confirm.addEventListener('click', saveUserParams);
+if (confirm != null) {
+	confirm.addEventListener('click', saveUserParams);
 
-function saveUserParams(event) {
-	event.preventDefault();
+	function saveUserParams(event) {
+		event.preventDefault();
 
-	data.main = userForm.elements.main.value;
-	data.dessert = userForm.elements.dessert.value;
-	data.drink = userForm.elements.drink.value;
-	data.kitchen = userForm.elements.kitchen.value;
+		data.main = userForm.elements.main.value;
+		data.dessert = userForm.elements.dessert.value;
+		data.drink = userForm.elements.drink.value;
+		data.kitchen = userForm.elements.kitchen.value;
 
-	for (let elem in data) {
-		localStorage.setItem(`${elem}`, `${data[elem]}`);
+		for (let elem in data) {
+			localStorage.setItem(`${elem}`, `${data[elem]}`);
+		};
+
+		window.location.assign('./cards.html');
 	};
-
-	window.location.assign('./cards.html');
 };

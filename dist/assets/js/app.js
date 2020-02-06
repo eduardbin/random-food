@@ -12485,6 +12485,37 @@ function initDeliveryMap() {
   });
 }
 
+; //getting user-parameters
+
+var confirm = document.querySelector('[data-get-data]');
+var userForm = document.querySelector('[data-user-form]');
+var data = {
+  main: 0,
+  dessert: 0,
+  drink: 0,
+  kitchen: 0
+};
+
+if (confirm != null) {
+  var saveUserParams = function saveUserParams(event) {
+    event.preventDefault();
+    data.main = userForm.elements.main.value;
+    data.dessert = userForm.elements.dessert.value;
+    data.drink = userForm.elements.drink.value;
+    data.kitchen = userForm.elements.kitchen.value;
+
+    for (var elem in data) {
+      localStorage.setItem("".concat(elem), "".concat(data[elem]));
+    }
+
+    ;
+    window.location.assign('./cards.html');
+  };
+
+  confirm.addEventListener('click', saveUserParams);
+  ;
+}
+
 ;
 
 /***/ }),
