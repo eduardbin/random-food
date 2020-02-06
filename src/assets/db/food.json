@@ -1,0 +1,357 @@
+[
+  {
+    "european": [
+      {
+        "restaurantLogo": "assets/img/restaurant-logos/palazzo.jpg",
+
+        "main": [
+          {
+            "foodName": "Французский суп из лука",
+            "foodPrice": "109",
+            "foodMass": "300",
+            "foodIngredients": "French onion soup",
+            "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/493/6464667685a269fcaf0a07.jpg"
+          },
+
+          {
+            "foodName": "Филе дорадо с овощами",
+            "foodPrice": "335",
+            "foodMass": "300",
+            "foodIngredients": "Dorado fillet with vegetables",
+            "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/494/21383138015a269fef88721.jpg"
+          }
+        ],
+
+        "drink": [
+          {
+            "foodName": "Апероль Спритц",
+            "foodPrice": "175",
+            "foodMass": "200",
+            "foodIngredients": "ликер Aperol, игристое вино Marques de Terrabona Cava Brut, фрэш апельсина, газированная вода",
+            "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/49/490/5169432015a269f3c3ff79.jpg"
+          },
+
+          {
+            "foodName": "Космо Тини",
+            "foodPrice": "95",
+            "foodMass": "150",
+            "foodIngredients": "водка, ликер Cointreau, фрэш лимона, смородина, сироп маракуйя",
+            "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/48/486/11351811555a269e48e8a2a.JPG"
+          }
+        ],
+
+        "dessert": [
+          {
+            "foodName": "Привет из Киева",
+            "foodPrice": "125",
+            "foodMass": "160",
+            "foodIngredients": "торт с волосским орехом",
+            "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/12/1200/13914472435cfa179e1d9a4.jpg"
+          },
+
+          {
+            "foodName": "Любимый",
+            "foodPrice": "125",
+            "foodMass": "200",
+            "foodIngredients": "черничный торт",
+            "foodImg": "https://palazzo-hotel.phnr.com/static/photos/gallery/slider-800x500/12/1202/19157717895cfa17dc8740e.jpg"
+          }
+        ]
+      },
+
+      {
+        "restaurantLogo": "assets/img/restaurant-logos/atmosphere.jpg",
+
+        "main": [
+          {
+            "foodName": "Томато-Капрезе",
+            "foodPrice": "115",
+            "foodMass": "180",
+            "foodIngredients": "микс салата, соус песто, сырный крем, кедровий орех",
+            "foodImg": "https://gotovim-doma.ru/images/recipe/a/f8/af8e44deb66b0797c3b094c58e8d1225.jpg"
+          },
+
+          {
+            "foodName": "Мини рулеты с цукини",
+            "foodPrice": "133",
+            "foodMass": "180",
+            "foodIngredients": "фаршированные рикотой, кедровым орехом и мятой",
+            "foodImg": "https://img-global.cpcdn.com/recipes/308d194838f02faf/751x532cq70/rulietiki-iz-tsukini-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5-%D1%84%D0%BE%D1%82%D0%BE-%D1%80%D0%B5%D1%86%D0%B5%D0%BF%D1%82%D0%B0.jpg"
+          }
+        ],
+
+        "drink": [
+          {
+            "foodName": "Узвар из сухофруктов",
+            "foodPrice": "20",
+            "foodMass": "250",
+            "foodIngredients": "вода, сухофрукты",
+            "foodImg": "https://s0.tchkcdn.com/g-IAdHTsmgsWI_3OZ_YMz7HA/13/250286/660x480/f/0/8d458bfaceca5465b4ec730ba942b291_shutterstock_125761178.jpg"
+          },
+
+          {
+            "foodName": "Компот ягодный",
+            "foodPrice": "17",
+            "foodMass": "250",
+            "foodIngredients": "вода, ягоды",
+            "foodImg": "https://i.obozrevatel.com/food/recipemain/2019/11/4/0.webp?size=600x400"
+          }
+        ],
+
+        "dessert": [
+          {
+            "foodName": "Шоколадный фондан с мороженным",
+            "foodPrice": "70",
+            "foodMass": "100/30",
+            "foodIngredients": "шоколад, фондан, мороженное",
+            "foodImg": "https://lasunka.com/image1.jpg"
+          },
+
+          {
+            "foodName": "Кокосовый десерт с крем-парфе и манго",
+            "foodPrice": "83",
+            "foodMass": "120",
+            "foodIngredients": "кокос, десерт, крем, парфе, манго",
+            "foodImg": "https://zhiznsovkusom.ru/wp-content/uploads/2018/06/%D0%A0%D0%B8%D1%81%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%83%D0%B4%D0%B8%D0%BD%D0%B3-%D1%81-%D0%BC%D0%B0%D0%BD%D0%B3%D0%BE-1200x1033.jpg"
+          }
+        ]
+      }
+    ],
+
+    "asian": [
+      {
+        "restaurantLogo": "assets/img/restaurant-logos/tau.jpg",
+
+        "main": [
+          {
+            "foodName": "Утка по-пекински",
+            "foodPrice": "685",
+            "foodMass": "300",
+            "foodIngredients": "в стиле кантонес",
+            "foodImg": "https://smak.ua/i/58/27/7/58277/image_main/7196387b9abe1204576e43be07080460-quality_100Xresize_crop_1Xallow_enlarge_0Xw_680Xh_510.jpg"
+          },
+
+          {
+            "foodName": "Мисо ширу",
+            "foodPrice": "325",
+            "foodMass": "380",
+            "foodIngredients": "мисо-суп с морепродуктами",
+            "foodImg": "https://lh3.googleusercontent.com/proxy/rL2p3mMsoTROnJMXaVLP7S3a-mLuEZ9dBdvUn-AqNPdnskUPCPFlLKy8HuyW8uOadoWiIOEGvp7af8Qcz8-yEfIx3gxTJJSjHcD5X8jbjkrWdZVREmw"
+          }
+        ],
+
+        "drink": [
+          {
+            "foodName": "Bubble Gum Ice",
+            "foodPrice": "65",
+            "foodMass": "220",
+            "foodIngredients": "bubble, gum, ice",
+            "foodImg": "https://www.primedrink.ru/wp-content/uploads/2019/06/Cocktail-Bubble-Gum-Ice-900x444.jpg"
+          },
+
+          {
+            "foodName": "Клубничный Ice",
+            "foodPrice": "65",
+            "foodMass": "220",
+            "foodIngredients": "клубника, айс",
+            "foodImg": "https://st3.depositphotos.com/1175884/15979/i/1600/depositphotos_159792318-stock-photo-strawberry-juice-cocktail-with-ice.jpg"
+          }
+        ],
+
+        "dessert": [
+          {
+            "foodName": "Сорбе с мороженным и свежими ягодами",
+            "foodPrice": "145",
+            "foodMass": "260",
+            "foodIngredients": "сорбе, мороженное, ягоды(свежие)",
+            "foodImg": "https://v.img.com.ua/b/600x500/e/26/aacef4d92f8cd588df3a827a4539226e.jpg"
+          },
+
+          {
+            "foodName": "Моччи",
+            "foodPrice": "81",
+            "foodMass": "*2",
+            "foodIngredients": "японский десерт в асс.",
+            "foodImg": "https://image.cookly.me/images/japanese-sweets-mochi-daifuku-and-wagashi-class.jpeg"
+          }
+        ]
+      },
+
+      {
+        "restaurantLogo": "assets/img/restaurant-logos/rice.jpg",
+
+        "main": [
+          {
+            "foodName": "Маки ролл с урем",
+            "foodPrice": "55",
+            "foodMass": "110",
+            "foodIngredients": "рис, нори, угорь, кунжут белый, унаги",
+            "foodImg": "https://rice-food.com.ua/wp-content/uploads/2019/06/%D0%9C%D0%B0%D0%BA%D0%B8-%D0%A0%D0%BE%D0%BB%D0%BB-%D1%81-%D0%A3%D0%B3%D1%80%D0%B5%D0%BC-min-768x768.png"
+          },
+
+          {
+            "foodName": "Гравлакс Татаки",
+            "foodPrice": "118",
+            "foodMass": "300",
+            "foodIngredients": "рис, нори, сыр филадельфия, угорь, манго, лосось гравлакс татаки, соус имбирно-карамельный",
+            "foodImg": "https://rice-food.com.ua/wp-content/uploads/2019/06/%D0%A0%D0%BE%D0%BB%D0%BB-%D0%93%D1%80%D0%B0%D0%B2%D0%BB%D0%B0%D0%BA%D1%81-%D0%A2%D0%B0%D1%82%D0%B0%D0%BA%D0%B8_1-min-768x768.png"
+          }
+        ],
+
+        "drink": [
+          {
+            "foodName": "Суп Удон с курицей",
+            "foodPrice": "48",
+            "foodMass": "400",
+            "foodIngredients": "Бульон мисо, лапша удон, яйцо перепелиное, куриное филе, лук порей, кунжут",
+            "foodImg": "https://rice-food.com.ua/wp-content/uploads/2019/06/%D0%A1%D1%83%D0%BF-%D0%A3%D0%B4%D0%BE%D0%BD-%D1%81-%D0%9A%D1%83%D1%80%D0%B8%D1%86%D0%B5%D0%B9-min-768x768.png"
+          },
+
+          {
+            "foodName": "Лапша Соба с говядиной в соусе терияки",
+            "foodPrice": "88",
+            "foodMass": "400",
+            "foodIngredients": "Лапша соба, микс овощей, кунжут белый, лук порей, говядина, соус терияки, соус соевый",
+            "foodImg": "https://rice-food.com.ua/wp-content/uploads/2019/06/%D0%9B%D0%B0%D0%BF%D1%88%D0%B0-%D0%A1%D0%BE%D0%B1%D0%B0-%D1%81-%D0%93%D0%BE%D0%B2%D1%8F%D0%B4%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B2-%D0%A2%D0%B5%D1%80%D0%B8%D1%8F%D0%BA%D0%B8-min-768x768.png"
+          }
+        ],
+
+        "dessert": [
+          {
+            "foodName": "Гункан с лососем",
+            "foodPrice": "30",
+            "foodMass": "30",
+            "foodIngredients": "рис, нори, лосось, соус спайс, икра тобика",
+            "foodImg": "https://rice-food.com.ua/wp-content/uploads/2019/06/%D0%A1-%D0%BB%D0%BE%D1%81%D0%BE%D1%81%D0%B5%D0%BC_1-min-768x768.png"
+          },
+
+          {
+            "foodName": "Нигири с креветкой",
+            "foodPrice": "21",
+            "foodMass": "30",
+            "foodIngredients": "рис, нори, креветки",
+            "foodImg": "https://rice-food.com.ua/wp-content/uploads/2019/06/%D0%9D%D0%B8%D0%B3%D0%B8%D1%80%D0%B8-%D1%81-%D0%9A%D1%80%D0%B5%D0%B2%D0%B5%D1%82%D0%BA%D0%BE%D0%B9_1-min-768x768.png"
+          }
+        ]
+      }
+    ],
+
+    "ukrainian": [
+      {
+        "restaurantLogo": "assets/img/restaurant-logos/komora.jpg",
+
+        "main": [
+          {
+            "foodName": "Полтавська галушка",
+            "foodPrice": "68",
+            "foodMass": "345",
+            "foodIngredients": "Парова галушка у сметанковому соусі з відвареною чікою",
+            "foodImg": "http://komora.kitchen/wp-content/uploads/2017/09/poltavska-1.jpg"
+          },
+
+          {
+            "foodName": "Шпинатна Ля-вітамі",
+            "foodPrice": "88",
+            "foodMass": "445",
+            "foodIngredients": "Парова галушка зі шпинатом у сметанковому соусі з морквою, спаржею та смаженими грибочками, приправлена бринзою та фірмовим соусом",
+            "foodImg": "http://komora.kitchen/wp-content/uploads/2017/09/shpinatna.jpg"
+          }
+        ],
+
+        "drink": [
+          {
+            "foodName": "Шаманське зілля",
+            "foodPrice": "35",
+            "foodMass": "300",
+            "foodIngredients": "Зміцнюючий напій з обліпихою та імбирно-медовою сумішшю, холодний або гарячий на вибір",
+            "foodImg": "http://komora.kitchen/wp-content/uploads/2017/09/chay-2.jpg"
+          },
+
+          {
+            "foodName": "Антибіотик",
+            "foodPrice": "15",
+            "foodMass": "250",
+            "foodIngredients": "Напій із сухофруктів та смородини",
+            "foodImg": "http://komora.kitchen/wp-content/uploads/2018/03/antibiotik.jpg"
+          }
+        ],
+
+        "dessert": [
+          {
+            "foodName": "Галушковий брауні",
+            "foodPrice": "45",
+            "foodMass": "140",
+            "foodIngredients": "Парова шоколадна галушка з шоколадною начинкою під кремово-ванільним соусом.",
+            "foodImg": "http://komora.kitchen/wp-content/uploads/2017/08/brauni.jpg"
+          },
+
+          {
+            "foodName": "Чиказький сирник",
+            "foodPrice": "40",
+            "foodMass": "185",
+            "foodIngredients": "Ніжний творог на печиві, вкритий фруктовим желе та мармеладом",
+            "foodImg": "http://komora.kitchen/wp-content/uploads/2019/09/chikazkiy.jpg"
+          }
+        ]
+      },
+
+      {
+        "restaurantLogo": "assets/img/restaurant-logos/shkvarka.jpg",
+
+        "main": [
+          {
+            "foodName": "Борщ",
+            "foodPrice": "31",
+            "foodMass": "250",
+            "foodIngredients": "борщ з пампушками та ребром",
+            "foodImg": "https://www.koolinar.ru/all_image/recipes/62/62723/recipe_2151445e-d6f9-4026-a01b-249c8dc4011c_large.jpg"
+          },
+
+          {
+            "foodName": "Зрази",
+            "foodPrice": "57",
+            "foodMass": "265",
+            "foodIngredients": "картофельные зразы с мясом и сметаной",
+            "foodImg": "https://i.obozrevatel.com/food/recipemain/2018/12/21/3-kartoplya.webp?size=600x400"
+          }
+        ],
+
+        "drink": [
+          {
+            "foodName": "Узвар",
+            "foodPrice": "17",
+            "foodMass": "200",
+            "foodIngredients": "вода, сухофрукты",
+            "foodImg": "https://i.obozrevatel.com/food/recipemain/2019/9/17/oblozhka31.webp?size=600x400"
+          },
+
+          {
+            "foodName": "Морс",
+            "foodPrice": "17",
+            "foodMass": "200",
+            "foodIngredients": "вода, мокрофрукты",
+            "foodImg": "https://img.delo-vcusa.ru/2017/01/Klyukvennyy-mors-690x430.jpg"
+          }
+        ],
+
+        "dessert": [
+          {
+            "foodName": "Вареники",
+            "foodPrice": "43",
+            "foodMass": "240",
+            "foodIngredients": "вареники с вишнями",
+            "foodImg": "https://smachno.ua/wp-content/uploads/2015/06/11/varenikisvishnej.jpg"
+          },
+
+          {
+            "foodName": "Сирники",
+            "foodPrice": "51",
+            "foodMass": "200",
+            "foodIngredients": "сырники со сгущенкой",
+            "foodImg": "https://www.gastronom.ru/binfiles/images/20170907/b8d67dcf.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]
