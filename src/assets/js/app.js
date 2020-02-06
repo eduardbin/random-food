@@ -24,14 +24,25 @@ import './lib/slick.min.js';
 
 $(document).foundation();
 
+//cards.html
+$(document).ready(function () {
+	$(".ba-food_slider").slick({
+		centerMode: true,
+		slidesToShow: 1,
+		centerPadding: '23%',
+	});
+});
 
-// index.html
+$(document).foundation();
 
+
+//index.html
 'use strict';
 //Create and functional map in index-page
 let deliveryMap;
 
-initDeliveryMap();
+window.addEventListener('load', initDeliveryMap);
+
 function initDeliveryMap() {
 	// The location of mapCenter
 	let cities = {
@@ -67,14 +78,3 @@ function initDeliveryMap() {
 		deliveryMap.setCenter(pos);
 	});
 };
-
-
-//cards.html
-
-$(document).ready(function () {
-	$(".ba-food_slider").slick({
-		centerMode: true,
-		slidesToShow: 1,
-		centerPadding: '23%',
-	});
-});

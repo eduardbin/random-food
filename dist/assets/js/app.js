@@ -12416,10 +12416,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_foundation_explicit_pieces__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/foundation-explicit-pieces */ "./src/assets/js/lib/foundation-explicit-pieces.js");
 /* harmony import */ var _lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/slick.min.js */ "./src/assets/js/lib/slick.min.js");
 /* harmony import */ var _lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.js */ "./src/assets/js/index.js");
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _cards_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cards.js */ "./src/assets/js/cards.js");
-/* harmony import */ var _cards_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_cards_js__WEBPACK_IMPORTED_MODULE_5__);
 
  // Foundation JS relies on a global varaible. In ES6, all imports are hoisted
 // to the top of the file so if we used`import` to import Foundation,
@@ -12439,84 +12435,56 @@ window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; // require('found
 // 	components: { App },
 // });
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); //cards.html
 
-
-
-/***/ }),
-
-/***/ "./src/assets/js/cards.js":
-/*!********************************!*\
-  !*** ./src/assets/js/cards.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var url = window.location.pathname;
-window.addEventListener('load', function () {
-  if (url == '/cards.html') {
-    $(document).ready(function () {
-      $(".ba-food_slider").slick({
-        centerMode: true,
-        slidesToShow: 1,
-        centerPadding: '23%'
-      });
-    });
-  } else return;
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".ba-food_slider").slick({
+    centerMode: true,
+    slidesToShow: 1,
+    centerPadding: '23%'
+  });
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); //index.html
 
-/***/ }),
+'use strict'; //Create and functional map in index-page
 
-/***/ "./src/assets/js/index.js":
-/*!********************************!*\
-  !*** ./src/assets/js/index.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
 
-var url = window.location.pathname;
-window.addEventListener('load', function () {
-  if (url == '/' || url == '/index.html') {
-    var initDeliveryMap = function initDeliveryMap() {
-      // The location of mapCenter
-      var cities = {
-        poltava: {
-          lat: 49.592232,
-          lng: 34.545601
-        }
-      };
-      var mapCenter = cities.poltava; //map-options
+var deliveryMap;
+window.addEventListener('load', initDeliveryMap);
 
-      deliveryMap = new google.maps.Map(document.querySelector('.ed-delivery__map'), {
-        center: mapCenter,
-        zoom: 12,
-        disableDefaultUI: true
-      }); //move mapCenter on select change
-      // let citySelect = document.querySelector('*input-select-data-atribute*');
-      // citySelect.addEventListener('change', () => {
-      // 	let city = citySelect.value;
-      // 	let newCoords = cities[city];
-      // 	deliveryMap.setCenter(newCoords);
-      // });
-      //try map with geolocation while we dont use city-list in header or
+function initDeliveryMap() {
+  // The location of mapCenter
+  var cities = {
+    poltava: {
+      lat: 49.592232,
+      lng: 34.545601
+    }
+  };
+  var mapCenter = cities.poltava; //map-options
 
-      navigator.geolocation.getCurrentPosition(function (position) {
-        var pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-        deliveryMap.setCenter(pos);
-      });
+  deliveryMap = new google.maps.Map(document.querySelector('.ed-delivery__map'), {
+    center: mapCenter,
+    zoom: 12,
+    disableDefaultUI: true
+  }); //move mapCenter on select change
+  // let citySelect = document.querySelector('*input-select-data-atribute*');
+  // citySelect.addEventListener('change', () => {
+  // 	let city = citySelect.value;
+  // 	let newCoords = cities[city];
+  // 	deliveryMap.setCenter(newCoords);
+  // });
+  //try map with geolocation while we dont use city-list in header or
+
+  navigator.geolocation.getCurrentPosition(function (position) {
+    var pos = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
     };
+    deliveryMap.setCenter(pos);
+  });
+}
 
-    'use strict'; //Create and functional map in index-page
-
-
-    var deliveryMap;
-    initDeliveryMap();
-    ;
-  } else return;
-});
+;
 
 /***/ }),
 
