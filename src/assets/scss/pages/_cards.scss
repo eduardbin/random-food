@@ -1,6 +1,32 @@
-.ba-sss{
-    height: 300px;
-    background-color: blue;
+.ba-sss {
+  height: 300px;
+  background-color: blue;
+}
 
+.ba-card-list {
+  a {
+    color: #646464;
 
+    &:hover {
+      color: lighten(#646464, 15%);
+    }
+  }
+}
+
+.active {
+  position: relative;
+
+  a {
+    color: #fc9908;
+  }
+
+  &::after {
+    content: "";
+    width: 200%;
+    height: 1px;
+    background-color: #fc9908;
+    position: absolute;
+    bottom: -18px;
+    left: -50%;
+  }
 }

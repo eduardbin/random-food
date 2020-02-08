@@ -12416,14 +12416,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_foundation_explicit_pieces__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/foundation-explicit-pieces */ "./src/assets/js/lib/foundation-explicit-pieces.js");
 /* harmony import */ var _lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/slick.min.js */ "./src/assets/js/lib/slick.min.js");
 /* harmony import */ var _lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_lib_slick_min_js__WEBPACK_IMPORTED_MODULE_3__);
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
+/* harmony import */ var _index_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index-map.js */ "./src/assets/js/index-map.js");
+/* harmony import */ var _index_map_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_map_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _index_get_user_param_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index-get-user-param.js */ "./src/assets/js/index-get-user-param.js");
+/* harmony import */ var _index_get_user_param_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_get_user_param_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _cards_randomizer_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cards-randomizer.js */ "./src/assets/js/cards-randomizer.js");
+/* harmony import */ var _cards_randomizer_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_cards_randomizer_js__WEBPACK_IMPORTED_MODULE_6__);
 
  // Foundation JS relies on a global varaible. In ES6, all imports are hoisted
 // to the top of the file so if we used`import` to import Foundation,
@@ -12443,20 +12441,328 @@ window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; // require('found
 // 	components: { App },
 // });
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); //cards.html
-//slider
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".ba-food_slider").slick({
-    centerMode: true,
-    slidesToShow: 1,
-    centerPadding: '23%'
+
+ //slider
+// $(document).ready(function () {
+// 	$(".ba-food_slider").slick({
+// 		centerMode: true,
+// 		slidesToShow: 1,
+// 		centerPadding: '23%',
+// 	});
+// });
+
+/***/ }),
+
+/***/ "./src/assets/js/cards-randomizer.js":
+/*!*******************************************!*\
+  !*** ./src/assets/js/cards-randomizer.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var anotherMenuButton = document.querySelector('[data-get-new-menu]');
+var fetchUrl = "assets/db/food.json";
+var foodData;
+var restaurantLogoURL;
+var mainFood;
+var drinkFood;
+var dessertFood;
+
+if (anotherMenuButton != null) {
+  anotherMenuButton.addEventListener('click', getJSON);
+  window.addEventListener('load', getJSON);
+}
+
+;
+
+function getNewMenu() {
+  if (localStorage.kitchen == 'all') {
+    foodData = [].concat(_toConsumableArray(foodData.european), _toConsumableArray(foodData.asian), _toConsumableArray(foodData.ukrainian));
+  } else {
+    foodData = _toConsumableArray(foodData[localStorage.kitchen]);
+  }
+
+  ;
+  foodData = foodData[getRandom(foodData.length)];
+  restaurantLogoURL = foodData.restaurantLogo;
+
+  if (localStorage.main == 'true') {
+    mainFood = foodData.main[getRandom(foodData.main.length)];
+  }
+
+  ;
+
+  if (localStorage.dessert == 'true') {
+    dessertFood = foodData.dessert[getRandom(foodData.dessert.length)];
+  }
+
+  ;
+
+  if (localStorage.drink == 'true') {
+    drinkFood = foodData.drink[getRandom(foodData.drink.length)];
+  }
+
+  ;
+  showNewMenu(mainFood, dessertFood, drinkFood);
+}
+
+;
+
+function getJSON() {
+  fetch(fetchUrl).then(function (response) {
+    return response.json();
+  }).then(function (response) {
+    foodData = response;
+    getNewMenu();
   });
-});
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); //index.html
+}
 
-'use strict'; //Create and functional map in index-page
+;
 
+function getRandom(maxNumber) {
+  var randomNumber = Math.floor(Math.random() * maxNumber);
+  return randomNumber;
+}
+
+; // show menu in cards
+//Get li tmplt from html
+
+var menuTmplt = document.querySelector('[data-tmplt-card]').innerHTML;
+var menuBar = document.querySelector('[data-menu]');
+
+function showNewMenu(mainFood, dessertFood, drinkFood) {
+  var allPrice = +mainFood.foodPrice + +dessertFood.foodPrice + +drinkFood.foodPrice;
+  var allMass = +mainFood.foodMass + +dessertFood.foodMass + +drinkFood.foodMass;
+  var newMenu = menuTmplt.replace(/{}allPrice{}/ig, allPrice).replace(/{}allMass{}/ig, allMass).replace(/{}mainImg{}/ig, mainFood.foodImg).replace(/{}mainName{}/ig, mainFood.foodName).replace(/{}mainPrice{}/ig, mainFood.foodPrice).replace(/{}mainMass{}/ig, mainFood.foodMass).replace(/{}mainIngredients{}/ig, mainFood.foodIngredients).replace(/{}drinkImg{}/ig, drinkFood.foodImg).replace(/{}drinkName{}/ig, drinkFood.foodName).replace(/{}drinkPrice{}/ig, drinkFood.foodPrice).replace(/{}drinkMass{}/ig, drinkFood.foodMass).replace(/{}drinkIngredients{}/ig, drinkFood.foodIngredients).replace(/{}dessertImg{}/ig, dessertFood.foodImg).replace(/{}dessertName{}/ig, dessertFood.foodName).replace(/{}dessertPrice{}/ig, dessertFood.foodPrice).replace(/{}dessertMass{}/ig, dessertFood.foodMass).replace(/{}dessertIngredients{}/ig, dessertFood.foodIngredients);
+  menuBar.innerHTML += newMenu;
+  tabFunction();
+}
+
+;
+
+function tabFunction() {
+  //tab sections
+  var tabItems = document.querySelectorAll('.tab-item');
+  var tabSections = document.querySelectorAll('.ed-section');
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = tabItems[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var tabItem = _step.value;
+      tabItem.addEventListener('click', function (event) {
+        return event.preventDefault();
+      });
+      tabItem.addEventListener('click', tabSection);
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  ;
+
+  function tabSection() {
+    var clickedItem = this;
+    var sections = getSelectedSection(clickedItem);
+    hideAllSections();
+    showSelectedSection(sections);
+  }
+
+  ;
+
+  function getSelectedSection(clickedItem) {
+    var itemId = clickedItem.hash;
+    return document.querySelectorAll("[data-id=\"".concat(itemId, "\"]"));
+  }
+
+  ;
+
+  function hideAllSections() {
+    var _iteratorNormalCompletion2 = true;
+    var _didIteratorError2 = false;
+    var _iteratorError2 = undefined;
+
+    try {
+      for (var _iterator2 = tabSections[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+        var _tabSection = _step2.value;
+        _tabSection.hidden = true;
+      }
+    } catch (err) {
+      _didIteratorError2 = true;
+      _iteratorError2 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+          _iterator2.return();
+        }
+      } finally {
+        if (_didIteratorError2) {
+          throw _iteratorError2;
+        }
+      }
+    }
+
+    ;
+  }
+
+  ;
+
+  function showSelectedSection(sections) {
+    for (var section in sections) {
+      sections[section].hidden = false;
+    }
+
+    ;
+  }
+
+  ; //tab styles
+
+  var navItems = document.querySelectorAll('.ba-nav__item');
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
+
+  try {
+    for (var _iterator3 = navItems[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var navItem = _step3.value;
+      navItem.addEventListener('click', activeItem);
+    }
+  } catch (err) {
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+        _iterator3.return();
+      }
+    } finally {
+      if (_didIteratorError3) {
+        throw _iteratorError3;
+      }
+    }
+  }
+
+  ;
+
+  function activeItem() {
+    var clickedItem = this;
+    removeAllActiveClasses();
+    addActiveClass(clickedItem);
+  }
+
+  ;
+
+  function removeAllActiveClasses() {
+    var _iteratorNormalCompletion4 = true;
+    var _didIteratorError4 = false;
+    var _iteratorError4 = undefined;
+
+    try {
+      for (var _iterator4 = navItems[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+        var navItem = _step4.value;
+        navItem.classList.remove('active');
+      }
+    } catch (err) {
+      _didIteratorError4 = true;
+      _iteratorError4 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+          _iterator4.return();
+        }
+      } finally {
+        if (_didIteratorError4) {
+          throw _iteratorError4;
+        }
+      }
+    }
+
+    ;
+  }
+
+  ;
+
+  function addActiveClass(clickedItem) {
+    clickedItem.classList.add('active');
+  }
+
+  ;
+}
+
+;
+
+/***/ }),
+
+/***/ "./src/assets/js/index-get-user-param.js":
+/*!***********************************************!*\
+  !*** ./src/assets/js/index-get-user-param.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var userForm = document.querySelector('[data-user-form]');
+var data = {
+  main: null,
+  dessert: null,
+  drink: null,
+  kitchen: null
+};
+
+if (userForm != null) {
+  var saveUserParams = function saveUserParams(event) {
+    event.preventDefault();
+    data.main = userForm.elements.main.checked;
+    data.dessert = userForm.elements.dessert.checked;
+    data.drink = userForm.elements.drink.checked;
+    data.kitchen = userForm.elements.kitchen.value;
+
+    for (var elem in data) {
+      localStorage.setItem("".concat(elem), "".concat(data[elem]));
+    }
+
+    ;
+    window.location.assign('./cards.html');
+  };
+
+  userForm.addEventListener('submit', saveUserParams);
+  ;
+}
+
+;
+
+/***/ }),
+
+/***/ "./src/assets/js/index-map.js":
+/*!************************************!*\
+  !*** ./src/assets/js/index-map.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+ //Create and functional map in index-page
 
 var deliveryMap;
 
@@ -12495,72 +12801,6 @@ if (document.querySelector('.ed-delivery__map') != null) {
 
   window.addEventListener('load', initDeliveryMap);
   ;
-}
-
-; //getting user-parameters
-
-var userForm = document.querySelector('[data-user-form]');
-var data = {
-  main: null,
-  dessert: null,
-  drink: null,
-  kitchen: null
-};
-
-if (userForm != null) {
-  var saveUserParams = function saveUserParams(event) {
-    event.preventDefault();
-    data.main = userForm.elements.main.checked;
-    data.dessert = userForm.elements.dessert.checked;
-    data.drink = userForm.elements.drink.checked;
-    data.kitchen = userForm.elements.kitchen.value;
-
-    for (var elem in data) {
-      localStorage.setItem("".concat(elem), "".concat(data[elem]));
-    }
-
-    ;
-    window.location.assign('./cards.html');
-  };
-
-  userForm.addEventListener('submit', saveUserParams);
-  ;
-}
-
-; //randomizer
-
-var anotherMenuButton = document.querySelector('[data-get-new-menu]');
-var fetchUrl = "assets/db/food.json";
-var foodData;
-
-if (anotherMenuButton != null) {
-  anotherMenuButton.addEventListener('click', getNewMenu);
-}
-
-;
-
-function getNewMenu() {
-  foodData = getJSON();
-
-  if (localStorage.kitchen == 'all') {
-    foodData = [].concat(_toConsumableArray(foodData.european), _toConsumableArray(foodData.asian), _toConsumableArray(foodData.ukrainian));
-  } else {
-    foodData = _toConsumableArray(foodData[localStorage.kitchen]);
-  }
-
-  ;
-  console.log(foodData);
-}
-
-;
-
-function getJSON() {
-  fetch(fetchUrl).then(function (response) {
-    return response.json();
-  }).then(function (response) {
-    return foodData = response;
-  });
-  return foodData;
 }
 
 ;
