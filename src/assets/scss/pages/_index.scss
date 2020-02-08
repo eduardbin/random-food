@@ -34,12 +34,23 @@
       line-height: 24px;
       margin-bottom: 21px;
     }
+    &--hidden{
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
   }
 
   .ba-big-logo {
     margin-bottom: 7px;
   }
-  .ba-heady {
+  @include breakpoint(small only) {
+    color: #fff;
+  }
+}
+//sell section
+
+
+ .ba-heady {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,11 +74,7 @@
   .ba-btn-margin {
     margin-bottom: 55px;
   }
-  @include breakpoint(small only) {
-    color: #fff;
-  }
-}
-//sell section
+ 
 .ba-section-sell {
   padding-top: 25px;
   padding-bottom: 80px;
@@ -236,26 +243,47 @@ margin-bottom: 38px;
   
 }
 .ba-card-section{
-  padding: 100px 50px;
+
+  padding: 70px 0;
+  padding-bottom: 100px;
   background: linear-gradient(360deg, #4d5063 0%, #1f2533 96.6%);
 
-
-
+@include breakpoint(medium){
+  padding: 100px 50px;
+}
   .ba-info-slick{
     color: #fff;
-
+@include breakpoint(small only){
+   h2{
+        font-size: 48px;
+       text-align: center;
+      }
+  
+}
     &__title{
       margin-bottom: 0;
+    @include breakpoint(small only){
+      font-size: 14px;
+     margin-top: 10px;
+    }
+      }
     }
   }
   .ba-huge-card{
     background-color: #fff;
-    padding: 30px;
+    margin: 0 15px;
+    margin-top: 10px;
+    @include breakpoint(medium){
+      padding: 30px;
     display: inline-block;
+    }
   }
   .ba-top-desc{
-    display: flex;
+   padding: 14px;
+    @include breakpoint(medium){
+       display: flex;
     justify-content: space-between;
+    }
 
     &__menu{
       h5{
@@ -267,9 +295,19 @@ font-size: 14px;
       }
     }
     .ba-top-desk-priceweight{
-      display: flex;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+p{
+  margin-bottom: 0;
+}
+      @include breakpoint(medium){
+         display: flex;
       flex-direction: column;
       align-items: flex-end;
+      }
+     
     }
 
     .ba-card-price{
@@ -280,6 +318,13 @@ font-size: 14px;
 }
 
 .ba-card-list{
+
+    li+li{
+      margin-left: 10px;
+
+  }
+  margin: 0 auto;
+  margin-bottom: 15px;
   font-weight: 500;
 font-size: 14px;
   list-style: none;
@@ -298,11 +343,24 @@ align-items: center;
   }
 }
 .ba-bottom-desc{
+  padding: 14px;
+  @include breakpoint(medium-down){
+    
+  }
   &__title{
     display: flex;
 align-items: center;
       margin-top: 15px;
       font-size: 20px;
+
+   p{
+          display: none;
+        }
+      @include breakpoint(medium){
+       p{
+         display: block;
+       }
+
     h5{
     
       font-weight: 500;
@@ -346,4 +404,19 @@ align-items: center;
 
 .ba-once-m{
   margin-bottom: 38px;
+}
+.ba-undercard{
+  @include breakpoint(medium){
+    display: none;
+  }
+  color: #fff;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.ba-card-log{
+  display: none;
+  @include breakpoint(medium){
+    display: inline-block;
+  }
 }
