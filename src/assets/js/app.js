@@ -14,18 +14,46 @@ window.jQuery = $;
 import './lib/foundation-explicit-pieces';
 
 import './lib/slick.min.js';
+// import './App.vue';
+
+// new Vue({
+// 	el: '#catalog',
+// 	template: '<App/>',
+// 	components: { App },
+// });
 
 $(document).foundation();
 
+import './index-map.js';
+import './index-get-user-param.js';
+import './cards-randomizer.js';
 
-// 'use strict';
+// slider
+$(document).ready(function () {
+	$(".ba-food_slider").slick({
+		centerMode: true,
+		slidesToShow: 1,
+		centerPadding: '23%',
+		responsive: [
+			{
+				breakpoint: 1270,
+				settings: {
+					centerPadding: '15%',
+				}
+			},
+			{
+				breakpoint: 1000,
+				settings: {
+					centerPadding: '10%',
+				}
+			},
+			{
+				breakpoint: 865,
+				settings: {
+					centerMode: false,
+				}
+			},
 
-// let deliveryMap;
-
-// document.addEventListener('load', initDeliveryMap);
-// function initDeliveryMap() {
-// 	deliveryMap = new google.maps.Map(document.querySelector('.ed-delivery__map'), {
-// 		center: { lat: -34.397, lng: 150.644 },
-// 		zoom: 8
-// 	});
-// };
+		]
+	});
+});

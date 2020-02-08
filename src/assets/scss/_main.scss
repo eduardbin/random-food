@@ -20,10 +20,9 @@ button,
   &__primary {
     background-color: $primary-color;
     color: #fff;
-    &:hover{
-      color: #fff;
-       border: 2px solid #fff;
-       overflow: hidden;
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+      overflow: hidden;
     }
   }
   &__mob {
@@ -31,10 +30,8 @@ button,
     color: #fff;
     border: 2px solid;
     border-color: $primary-color;
-    &:hover{
-      
-       background-color: $primary-color;
-      
+    &:hover {
+      background-color: $primary-color;
     }
   }
 }

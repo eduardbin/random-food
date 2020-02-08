@@ -1,124 +1,116 @@
 ---
-title: МОЯ ЕДА
+title: Твое случайное меню
 ---
+<link rel="stylesheet" type="text/css" href="assets/slider/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/slider/slick-theme.css">
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="assets/slider/slick.js" type="text/javascript" charset="utf-8"></script>
 <section class="ba-card-section">
-   <div class="ba-head row column  show-for-small-only">
-    <div class="ba-heady">
-      <a href="/" class="ba-intro-logo ba-intro-logo-heady">
-        <img src="{{root}}assets/img/mobile-logo.png" alt="Logo" />
-      </a>
-      <form action="#" class="ba-form ">
-        <input class="ba-inp" type="text" required />
-        <button class="ba-btn-main">
-          <svg width="13" height="13">
-            <use xlink:href="#mob-search"></use>
-          </svg>
-        </button>
-      </form>
-    </div>
-    <!-- /.ba-form -->
-  </div>
-     <div class="row align-middle">
-       <div class="column large-4 row column text-left small-12">
-            <img class="  ba-card-log" src="../assets/img/logo-card.png" alt="njnjnj">
-      </div>
+	<div class="row align-middle">
+		<div class="column large-4 row column text-left">
+			<img src="assets/img/logo-card.png" alt="njnjnj">
+		</div>
 
-        <div class="column large-4">
-     <div class="ba-info-slick row column text-center">
-  <p class="ba-info-slick__title">Ресторан</p>
-  <h2>RICE</h2>
-     </div>
-<!-- /.ba-info-slick -->
-</div>
-</div>
+		<div class="column large-4">
+			<div class="ba-info-slick row column text-center">
+				<p class="ba-info-slick__title">Ресторан</p>
+				<h2>RICE</h2>
+			</div>
+			<!-- /.ba-info-slick -->
+		</div>
+	</div>
+	<div class="ba-food_slider" data-menu>
+
+	</div>
+	<div class="row column">
+		<div class="ba-btn-wrap">
+			<div class="ba-save-lenght ba-once-card">
+				<a href="bin.html" class="ba-button ba-button__mob ">В корзину</a>
+			</div>
+			<div class="ba-save-lenght">
+				<button type="button" data-get-new-menu class="ba-button ba-button__mob ">Выбрать другое меню</button>
+			</div>
+		</div>
 
 
-<div class="ba-huge-card">
-              <div class="ba-top-desc">
-                <div class="ba-top-desc__menu">
-                  <h5>Твое меню</h5>
-                   <p>Мы выбрали самое вкусное <br> меню для тебя.</p>
-
-
-               </div>
-<div class="ba-top-desk-priceweight">
-  <p class="ba-card-price">115 грн</p>
-  <p>550g</p>
-</div>
-
-              </div>
-<div class="ba-top-desc-type-food">
-  <ul class="ba-card-list">
-     <li><a href="">ОСНОВНОЕ
-     
-    </a></li>
-    
-     <li>
- <a href="#">
-     НАПИТОК
-    </a>
-
-
-     </li>
-   
-      <li>
- <a href="">
-      ДЕСЕРТ
-    </a>
-
-      </li>
-
-
-
-   
-  </ul>
-</div>
-<!-- /.ba-top-desc__type-food -->
-              <div class="ba-img">
-                <img src="../assets/img/burg-card-sec.png" alt="f,f,f">
-              </div>
-
-
-              <div class="ba-bottom-desc">
-                <div class="ba-bottom-desc__title">
-                  <h5> Бургер Цезарь</h5>
-                
-                  <p>55 hrn</p>
- </div>
-<div class="ba-bottom-desc__weight">
-  <p>
-  250 грамм
-
-  </p>
-</div>
-
-<p class="ba-set">
-  Состав: булочка с кунжутом, филе куриное, бекон, помидор, лист салата, сыр <br> Пармезан, соус Цезарь
-
-</p>
-
-               
-
-              </div>
-              <!-- /.ba-bottom-desc -->
-</div>
-<!-- /.ba-huge-card -->
-<p class="text-center ba-undercard">Понравилось меню? Добавь его в корзину!</p>
-<div class="row column">
-    <div class="ba-btn-wrap">
- <div class="ba-save-lenght ba-once-card">
-<a href="#" class="ba-button ba-button__mob " >В корзину</a>
-  </div>
-  <div class="ba-save-lenght">
-  <a class="ba-button ba-button__mob " >Выбрать другое меню</a>
-
-  </div>
-    </div>
- 
-
-</div>
+	</div>
 </section>
 <!-- /.ba-card-section -->
 
+<script type="text/template" data-tmplt-card>
 
+	<div class="ba-slider_item">
+		<div class="ba-huge-card">
+			<div class="ba-top-desc">
+				<div class="ba-top-desc__menu">
+					<h5>Твое меню</h5>
+					<p>Мы выбрали самое вкусное <br> меню для тебя.</p>
+				</div>
+				<div class="ba-top-desk-priceweight">
+					<p class="ba-card-price">{}allPrice{} грн</p>
+					<p>{}allMass{}g</p>
+				</div>
+			</div>
+			<div class="ba-top-desc-type-food">
+				<ul class="ba-card-list">
+					<li class="ba-nav__item active"><a class="tab-item" href="#main">ОСНОВНОЕ</a></li>
+					<li class="ba-nav__item"><a class="tab-item" href="#drink">НАПИТОК</a></li>
+					<li class="ba-nav__item"><a class="tab-item" href="#dessert">ДЕСЕРТ</a></li>
+				</ul>
+			</div>
+			<!-- /.ba-top-desc__type-food -->
+			<section class="ed-section" data-id="#main">
+				<div class="ba-img">
+					<img src="{}mainImg{}" alt="f,f,f">
+				</div>
+				<div class="ba-bottom-desc">
+					<div class="ba-bottom-desc__title">
+						<h5>{}mainName{}</h5>
+						<p>{}mainPrice{} грн</p>
+					</div>
+					<div class="ba-bottom-desc__weight">
+						<p>{}mainMass{} грамм</p>
+					</div>
+					<p class="ba-set">Состав: {}mainIngredients{}</p>
+				</div>
+				<!-- /.ba-bottom-desc -->
+			</section>
 
+			<section class="ed-section" data-id="#drink" hidden>
+				<div class="ba-img">
+					<img src="{}drinkImg{}" alt="f,f,f">
+				</div>
+				<div class="ba-bottom-desc">
+					<div class="ba-bottom-desc__title">
+						<h5>{}drinkName{}</h5>
+						<p>{}drinkPrice{} hrn</p>
+					</div>
+					<div class="ba-bottom-desc__weight">
+						<p>{}drinkMass{} грамм</p>
+					</div>
+					<p class="ba-set">Состав: {}drinkIngredients{}</p>
+				</div>
+				<!-- /.ba-bottom-desc -->
+			</section>
+
+			<section class="ed-section" data-id="#dessert" hidden>
+				<div class="ba-img">
+					<img src="{}dessertImg{}" alt="f,f,f">
+				</div>
+				<div class="ba-bottom-desc">
+					<div class="ba-bottom-desc__title">
+						<h5>{}dessertName{}</h5>
+						<p>{}dessertPrice{} hrn</p>
+					</div>
+					<div class="ba-bottom-desc__weight">
+						<p>{}dessertMass{} грамм</p>
+					</div>
+					<p class="ba-set">Состав: {}dessertIngredients{}</p>
+				</div>
+				<!-- /.ba-bottom-desc -->
+			</section>
+		</div>
+		<!-- /.ba-huge-card -->
+	</div>
+
+	</script>
