@@ -82,11 +82,11 @@ function showNewMenu(mainFood, dessertFood, drinkFood) {
 		.replace(/{}dessertMass{}/ig, dessertFood.foodMass)
 		.replace(/{}dessertIngredients{}/ig, dessertFood.foodIngredients);
 
-	menuBar.innerHTML += newMenu;
-
+	setSlider(newMenu);
 	tabFunction();
 };
 
+//tabs
 function tabFunction() {
 	//tab sections
 	let tabItems = document.querySelectorAll('.tab-item');
@@ -145,4 +145,9 @@ function tabFunction() {
 	function addActiveClass(clickedItem) {
 		clickedItem.classList.add('active');
 	};
+};
+
+// slider
+function setSlider(newMenu) {
+	$('.ba-food_slider').slick('slickAdd', `${newMenu}`);
 };

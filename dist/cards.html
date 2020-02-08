@@ -126,84 +126,6 @@
           	</div>
           	<div class="ba-food_slider" data-menu>
           
-          		<script type="text/template" data-tmplt-card>
-          
-          		<div class="ba-slider_item">
-          			<div class="ba-huge-card">
-          				<div class="ba-top-desc">
-          					<div class="ba-top-desc__menu">
-          						<h5>Твое меню</h5>
-          						<p>Мы выбрали самое вкусное <br> меню для тебя.</p>
-          					</div>
-          					<div class="ba-top-desk-priceweight">
-          						<p class="ba-card-price">{}allPrice{} грн</p>
-          						<p>{}allMass{}g</p>
-          					</div>
-          				</div>
-          				<div class="ba-top-desc-type-food">
-          					<ul class="ba-card-list">
-          						<li class="ba-nav__item active"><a class="tab-item" href="#main">ОСНОВНОЕ</a></li>
-          						<li class="ba-nav__item"><a class="tab-item" href="#drink">НАПИТОК</a></li>
-          						<li class="ba-nav__item"><a class="tab-item" href="#dessert">ДЕСЕРТ</a></li>
-          					</ul>
-          				</div>
-          				<!-- /.ba-top-desc__type-food -->
-          				<section class="ed-section" data-id="#main">
-          					<div class="ba-img">
-          						<img src="{}mainImg{}" alt="f,f,f">
-          					</div>
-          					<div class="ba-bottom-desc">
-          						<div class="ba-bottom-desc__title">
-          							<h5>{}mainName{}</h5>
-          							<p>{}mainPrice{} грн</p>
-          						</div>
-          						<div class="ba-bottom-desc__weight">
-          							<p>{}mainMass{} грамм</p>
-          						</div>
-          						<p class="ba-set">Состав: {}mainIngredients{}</p>
-          					</div>
-          					<!-- /.ba-bottom-desc -->
-          				</section>
-          
-          				<section class="ed-section" data-id="#drink" hidden>
-          					<div class="ba-img">
-          						<img src="{}drinkImg{}" alt="f,f,f">
-          					</div>
-          					<div class="ba-bottom-desc">
-          						<div class="ba-bottom-desc__title">
-          							<h5>{}drinkName{}</h5>
-          							<p>{}drinkPrice{} hrn</p>
-          						</div>
-          						<div class="ba-bottom-desc__weight">
-          							<p>{}drinkMass{} грамм</p>
-          						</div>
-          						<p class="ba-set">Состав: {}drinkIngredients{}</p>
-          					</div>
-          					<!-- /.ba-bottom-desc -->
-          				</section>
-          
-          				<section class="ed-section" data-id="#dessert" hidden>
-          					<div class="ba-img">
-          						<img src="{}dessertImg{}" alt="f,f,f">
-          					</div>
-          					<div class="ba-bottom-desc">
-          						<div class="ba-bottom-desc__title">
-          							<h5>{}dessertName{}</h5>
-          							<p>{}dessertPrice{} hrn</p>
-          						</div>
-          						<div class="ba-bottom-desc__weight">
-          							<p>{}dessertMass{} грамм</p>
-          						</div>
-          						<p class="ba-set">Состав: {}dessertIngredients{}</p>
-          					</div>
-          					<!-- /.ba-bottom-desc -->
-          				</section>
-          			</div>
-          			<!-- /.ba-huge-card -->
-          		</div>
-          
-          		</script>
-          
           	</div>
           	<div class="row column">
           		<div class="ba-btn-wrap">
@@ -219,6 +141,84 @@
           	</div>
           </section>
           <!-- /.ba-card-section -->
+          
+          <script type="text/template" data-tmplt-card>
+          
+          	<div class="ba-slider_item">
+          		<div class="ba-huge-card">
+          			<div class="ba-top-desc">
+          				<div class="ba-top-desc__menu">
+          					<h5>Твое меню</h5>
+          					<p>Мы выбрали самое вкусное <br> меню для тебя.</p>
+          				</div>
+          				<div class="ba-top-desk-priceweight">
+          					<p class="ba-card-price">{}allPrice{} грн</p>
+          					<p>{}allMass{}g</p>
+          				</div>
+          			</div>
+          			<div class="ba-top-desc-type-food">
+          				<ul class="ba-card-list">
+          					<li class="ba-nav__item active"><a class="tab-item" href="#main">ОСНОВНОЕ</a></li>
+          					<li class="ba-nav__item"><a class="tab-item" href="#drink">НАПИТОК</a></li>
+          					<li class="ba-nav__item"><a class="tab-item" href="#dessert">ДЕСЕРТ</a></li>
+          				</ul>
+          			</div>
+          			<!-- /.ba-top-desc__type-food -->
+          			<section class="ed-section" data-id="#main">
+          				<div class="ba-img">
+          					<img src="{}mainImg{}" alt="f,f,f">
+          				</div>
+          				<div class="ba-bottom-desc">
+          					<div class="ba-bottom-desc__title">
+          						<h5>{}mainName{}</h5>
+          						<p>{}mainPrice{} грн</p>
+          					</div>
+          					<div class="ba-bottom-desc__weight">
+          						<p>{}mainMass{} грамм</p>
+          					</div>
+          					<p class="ba-set">Состав: {}mainIngredients{}</p>
+          				</div>
+          				<!-- /.ba-bottom-desc -->
+          			</section>
+          
+          			<section class="ed-section" data-id="#drink" hidden>
+          				<div class="ba-img">
+          					<img src="{}drinkImg{}" alt="f,f,f">
+          				</div>
+          				<div class="ba-bottom-desc">
+          					<div class="ba-bottom-desc__title">
+          						<h5>{}drinkName{}</h5>
+          						<p>{}drinkPrice{} hrn</p>
+          					</div>
+          					<div class="ba-bottom-desc__weight">
+          						<p>{}drinkMass{} грамм</p>
+          					</div>
+          					<p class="ba-set">Состав: {}drinkIngredients{}</p>
+          				</div>
+          				<!-- /.ba-bottom-desc -->
+          			</section>
+          
+          			<section class="ed-section" data-id="#dessert" hidden>
+          				<div class="ba-img">
+          					<img src="{}dessertImg{}" alt="f,f,f">
+          				</div>
+          				<div class="ba-bottom-desc">
+          					<div class="ba-bottom-desc__title">
+          						<h5>{}dessertName{}</h5>
+          						<p>{}dessertPrice{} hrn</p>
+          					</div>
+          					<div class="ba-bottom-desc__weight">
+          						<p>{}dessertMass{} грамм</p>
+          					</div>
+          					<p class="ba-set">Состав: {}dessertIngredients{}</p>
+          				</div>
+          				<!-- /.ba-bottom-desc -->
+          			</section>
+          		</div>
+          		<!-- /.ba-huge-card -->
+          	</div>
+          
+          	</script>
         </main>
 
         <footer class="ba-footer">

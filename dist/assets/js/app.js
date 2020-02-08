@@ -12444,14 +12444,31 @@ window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; // require('found
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
 
 
- //slider
-// $(document).ready(function () {
-// 	$(".ba-food_slider").slick({
-// 		centerMode: true,
-// 		slidesToShow: 1,
-// 		centerPadding: '23%',
-// 	});
-// });
+ // slider
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".ba-food_slider").slick({
+    centerMode: true,
+    slidesToShow: 1,
+    centerPadding: '23%',
+    responsive: [{
+      breakpoint: 1270,
+      settings: {
+        centerPadding: '15%'
+      }
+    }, {
+      breakpoint: 1000,
+      settings: {
+        centerPadding: '10%'
+      }
+    }, {
+      breakpoint: 865,
+      settings: {
+        centerMode: false
+      }
+    }]
+  });
+});
 
 /***/ }),
 
@@ -12544,11 +12561,11 @@ function showNewMenu(mainFood, dessertFood, drinkFood) {
   var allPrice = +mainFood.foodPrice + +dessertFood.foodPrice + +drinkFood.foodPrice;
   var allMass = +mainFood.foodMass + +dessertFood.foodMass + +drinkFood.foodMass;
   var newMenu = menuTmplt.replace(/{}allPrice{}/ig, allPrice).replace(/{}allMass{}/ig, allMass).replace(/{}mainImg{}/ig, mainFood.foodImg).replace(/{}mainName{}/ig, mainFood.foodName).replace(/{}mainPrice{}/ig, mainFood.foodPrice).replace(/{}mainMass{}/ig, mainFood.foodMass).replace(/{}mainIngredients{}/ig, mainFood.foodIngredients).replace(/{}drinkImg{}/ig, drinkFood.foodImg).replace(/{}drinkName{}/ig, drinkFood.foodName).replace(/{}drinkPrice{}/ig, drinkFood.foodPrice).replace(/{}drinkMass{}/ig, drinkFood.foodMass).replace(/{}drinkIngredients{}/ig, drinkFood.foodIngredients).replace(/{}dessertImg{}/ig, dessertFood.foodImg).replace(/{}dessertName{}/ig, dessertFood.foodName).replace(/{}dessertPrice{}/ig, dessertFood.foodPrice).replace(/{}dessertMass{}/ig, dessertFood.foodMass).replace(/{}dessertIngredients{}/ig, dessertFood.foodIngredients);
-  menuBar.innerHTML += newMenu;
+  setSlider(newMenu);
   tabFunction();
 }
 
-;
+; //tabs
 
 function tabFunction() {
   //tab sections
@@ -12709,6 +12726,12 @@ function tabFunction() {
   }
 
   ;
+}
+
+; // slider
+
+function setSlider(newMenu) {
+  $('.ba-food_slider').slick('slickAdd', "".concat(newMenu));
 }
 
 ;

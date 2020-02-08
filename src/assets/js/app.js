@@ -28,11 +28,32 @@ import './index-map.js';
 import './index-get-user-param.js';
 import './cards-randomizer.js';
 
-//slider
-// $(document).ready(function () {
-// 	$(".ba-food_slider").slick({
-// 		centerMode: true,
-// 		slidesToShow: 1,
-// 		centerPadding: '23%',
-// 	});
-// });
+// slider
+$(document).ready(function () {
+	$(".ba-food_slider").slick({
+		centerMode: true,
+		slidesToShow: 1,
+		centerPadding: '23%',
+		responsive: [
+			{
+				breakpoint: 1270,
+				settings: {
+					centerPadding: '15%',
+				}
+			},
+			{
+				breakpoint: 1000,
+				settings: {
+					centerPadding: '10%',
+				}
+			},
+			{
+				breakpoint: 865,
+				settings: {
+					centerMode: false,
+				}
+			},
+
+		]
+	});
+});
