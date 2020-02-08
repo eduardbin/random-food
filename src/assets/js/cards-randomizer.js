@@ -56,31 +56,82 @@ function getRandom(maxNumber) {
 // show menu in cards
 
 //Get li tmplt from html
-let menuTmplt = document.querySelector('[data-tmplt-card]').innerHTML;
-let menuBar = document.querySelector('[data-menu]');
-
 function showNewMenu(mainFood, dessertFood, drinkFood) {
-	let allPrice = +mainFood.foodPrice + +dessertFood.foodPrice + +drinkFood.foodPrice;
-	let allMass = +mainFood.foodMass + +dessertFood.foodMass + +drinkFood.foodMass;
+	let menuTmplt = document.querySelector('[data-tmplt-card]').innerHTML;
+	let allPrice = 0;
+	let allMass = 0;
+	let notChecket = 'Не выбрано';
+	let notChecketImg = 'assets/img/intro_bg.jpg';
+
+	if (mainFood != undefined) {
+		allPrice = allPrice + +mainFood.foodPrice;
+		allMass = allMass + +mainFood.foodMass;
+	};
+
+	if (dessertFood != undefined) {
+		allPrice = allPrice + +dessertFood.foodPrice;
+		allMass = allMass + +dessertFood.foodMass;
+	};
+
+	if (drinkFood != undefined) {
+		allPrice = allPrice + +drinkFood.foodPrice;
+		allMass = allMass + +drinkFood.foodMass;
+	};
+
+
 
 	let newMenu = menuTmplt
 		.replace(/{}allPrice{}/ig, allPrice)
-		.replace(/{}allMass{}/ig, allMass)
-		.replace(/{}mainImg{}/ig, mainFood.foodImg)
-		.replace(/{}mainName{}/ig, mainFood.foodName)
-		.replace(/{}mainPrice{}/ig, mainFood.foodPrice)
-		.replace(/{}mainMass{}/ig, mainFood.foodMass)
-		.replace(/{}mainIngredients{}/ig, mainFood.foodIngredients)
-		.replace(/{}drinkImg{}/ig, drinkFood.foodImg)
-		.replace(/{}drinkName{}/ig, drinkFood.foodName)
-		.replace(/{}drinkPrice{}/ig, drinkFood.foodPrice)
-		.replace(/{}drinkMass{}/ig, drinkFood.foodMass)
-		.replace(/{}drinkIngredients{}/ig, drinkFood.foodIngredients)
-		.replace(/{}dessertImg{}/ig, dessertFood.foodImg)
-		.replace(/{}dessertName{}/ig, dessertFood.foodName)
-		.replace(/{}dessertPrice{}/ig, dessertFood.foodPrice)
-		.replace(/{}dessertMass{}/ig, dessertFood.foodMass)
-		.replace(/{}dessertIngredients{}/ig, dessertFood.foodIngredients);
+		.replace(/{}allMass{}/ig, allMass);
+
+	if (mainFood != undefined) {
+		newMenu = newMenu
+			.replace(/{}mainImg{}/ig, mainFood.foodImg)
+			.replace(/{}mainName{}/ig, mainFood.foodName)
+			.replace(/{}mainPrice{}/ig, mainFood.foodPrice)
+			.replace(/{}mainMass{}/ig, mainFood.foodMass)
+			.replace(/{}mainIngredients{}/ig, mainFood.foodIngredients);
+	} else {
+		newMenu = newMenu
+			.replace(/{}mainImg{}/ig, notChecketImg)
+			.replace(/{}mainName{}/ig, notChecket)
+			.replace(/{}mainPrice{}/ig, notChecket)
+			.replace(/{}mainMass{}/ig, notChecket)
+			.replace(/{}mainIngredients{}/ig, notChecket);
+	};
+
+	if (dessertFood != undefined) {
+		newMenu = newMenu
+			.replace(/{}dessertImg{}/ig, dessertFood.foodImg)
+			.replace(/{}dessertName{}/ig, dessertFood.foodName)
+			.replace(/{}dessertPrice{}/ig, dessertFood.foodPrice)
+			.replace(/{}dessertMass{}/ig, dessertFood.foodMass)
+			.replace(/{}dessertIngredients{}/ig, dessertFood.foodIngredients);
+	} else {
+		newMenu = newMenu
+			.replace(/{}dessertImg{}/ig, notChecketImg)
+			.replace(/{}dessertName{}/ig, notChecket)
+			.replace(/{}dessertPrice{}/ig, notChecket)
+			.replace(/{}dessertMass{}/ig, notChecket)
+			.replace(/{}dessertIngredients{}/ig, notChecket);
+	};
+
+	if (drinkFood != undefined) {
+		newMenu = newMenu
+			.replace(/{}drinkImg{}/ig, drinkFood.foodImg)
+			.replace(/{}drinkName{}/ig, drinkFood.foodName)
+			.replace(/{}drinkPrice{}/ig, drinkFood.foodPrice)
+			.replace(/{}drinkMass{}/ig, drinkFood.foodMass)
+			.replace(/{}drinkIngredients{}/ig, drinkFood.foodIngredients);
+	} else {
+		newMenu = newMenu
+			.replace(/{}drinkImg{}/ig, notChecketImg)
+			.replace(/{}drinkName{}/ig, notChecket)
+			.replace(/{}drinkPrice{}/ig, notChecket)
+			.replace(/{}drinkMass{}/ig, notChecket)
+			.replace(/{}drinkIngredients{}/ig, notChecket);
+	};
+
 
 	setSlider(newMenu);
 	tabFunction();
